@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Each box is inclluded in multiple units, each unit consists of the row\column\3x3 squares neighborhoods. The naked twins adds a new constraint to minimize the number of possibilities prior to performing a full search. The constraint is implemented by: 1- checking each of the boxes containing two values and looking for duplicates within each unit 2- if a duplicate is found, remove the values from other boxes within the same unit. For effeciency, the two values are added to a dictionary, and other values are compared to the dictionary.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Diagonal sudoku adds a new constraint to the regular constraints. To add the constraint, we add new units for diagonal and anti-diagonal. And since constraint propagation uses each of the units separately, the new constraints will be part of the constraint propagation.
 
 ### Install
 
